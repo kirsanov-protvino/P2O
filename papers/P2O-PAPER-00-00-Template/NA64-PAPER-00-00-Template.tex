@@ -1,0 +1,130 @@
+%Do not change these lines, just uncomment the needed one
+%\documentclass[prd,twocolumn,showpacs,groupedaddress,superscriptaddress,amsmath,amssymb]{revtex4-2}
+\documentclass[prd,showpacs,groupedaddress,superscriptaddress,amsmath,amssymb]{revtex4-2} % one-column text
+%\documentclass[preprint,showpacs,amsmath,amssymb]{revtex4-2}
+
+\usepackage{hhline}
+\usepackage{slashed}
+\usepackage{graphicx}% Include figure files
+\usepackage{graphics}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{lineno}
+\usepackage{multirow}
+%\usepackage{footnote}
+
+%\linenumbers
+
+
+\textwidth19.0cm
+\textheight24.0cm
+\setlength{\topmargin}{-1.5cm}
+\oddsidemargin -1.cm
+\evensidemargin 2.cm
+\def\u{\tilde{u}}
+\def\s{\tilde{s}}
+\def\t{\tilde{t}}
+\def\P{\mathcal{P}}
+\def\u{\tilde{u}}
+\def\s{\tilde{s}}
+\def\t{\tilde{t}}
+\def\k{{\bf k}}
+\def\p{{\bf p }}
+\def\V{{\bf V}}
+
+\newcommand\ee{e^+e^-}
+\newcommand\xdecay{X \rightarrow e^+  e^-}
+\newcommand\ainv{A'\to invisible}
+\newcommand\inv{ \chi\overline{\chi}}
+\newcommand\gp{ A'}
+\newcommand\g{\gamma}
+\newcommand\ma{m_{A'}}
+\newcommand\pair{e^+e^-}
+\newcommand\na{{n}_{A'}}
+\newcommand\Na{{N}_{A'}}
+\newcommand\ea{e^- Z \to e^- Z A';~ A' \to \chi \overline{\chi}}
+\newcommand\emu{e^- Z \to e^- Z \g; \g \to \mu^+ \mu^-}
+\newcommand\mm{\mu^+ \mu^-}
+
+
+\begin{document}
+
+
+%For CERN preprint:
+%\begin{center}
+%{\Large EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH}
+%\end{center}
+%\vskip1.5cm
+%\begin{flushright}
+%CERN-EP-2019-.....\\
+%\today
+%\end{flushright}
+%end CERN preprint
+
+
+\title{ \bf Template of NA64 Paper}
+
+
+%\author{M.~M.~Kirsanov$^{1}$\thanks{{\bf e-mail}: mikhail.kirsanov@cern.ch}, N.~V.~Krasnikov$^{1,2}$
+%\\
+% $^1$ Institute for Nuclear Research of the Russian Academy of Sciences, \\117312 Moscow, Russia \\
+% $^2$ Joint Institute for Nuclear Research, 141980 Dubna, Russia \\
+%}
+
+
+%alternative way of writing authors list, with a possibility of e-mail for several authors 
+%\author{M. M. Kirsanov}
+%\thanks{Corresponding author}
+%\email[\textbf{e-mail}: ]{mikhail.kirsanov@cern.ch}
+%\affiliation{Institute for Nuclear Research, 117312 Moscow, Russia}
+%\author{N.~V.~Krasnikov}
+%\email[\textbf{e-mail}: ]{nikolai.krasnikov@cern.ch}
+%\affiliation{Institute for Nuclear Research, 117312 Moscow, Russia}
+%\affiliation{Joint Institute for Nuclear Research, 141980 Dubna, Russia}
+
+
+%For the collaboration papers:
+\input ../AUTHORS/author_list.tex
+
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+%\date{June 17, 2009}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+
+
+\begin{abstract}
+Template of paper that correctly uses Bibliography. Requires latex version not earlier than 2020.
+On lxplus source the script latexcvmfs.csh (or use commands similar to the ones inside).
+\end{abstract}
+
+
+\maketitle
+\newpage
+
+
+\section{Introduction}
+
+
+A complete introduction to DM can be found in the 2017 US Cosmic Visions community report~\cite{Battaglieri:2017aum}
+or in the 2019 CERN Physics Beyond Colliders report~\cite{Beacham:2019nyx}.
+
+%\begin{figure*}[h]
+%\begin{center}
+%\includegraphics[width=0.75\textwidth]{plotYield.pdf}
+%\caption {The signal yield per $10^{10}$ EOT in the missing energy signature experiment for vector and pseudoscalar DM.
+%\label{fig:Yield}}
+%\end{center}
+%\end{figure*}
+
+
+\clearpage
+\bibliographystyle{apsrev4-2}
+%\bibliography{../Bibliography/bibliographyOther,../Bibliography/bibliographyNA64,../Bibliography/bibliographyNA64exp}
+\bibliography{../Bibliography/bibliographyOther_inspiresFormat,../Bibliography/bibliographyNA64_inspiresFormat,../Bibliography/bibliographyNA64exp}
+
+
+\end{document}
