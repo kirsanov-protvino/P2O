@@ -124,20 +124,28 @@ To check that your repositiry clone is "pushable" type inside it "git remote -v"
 \section{Technical notes on the Globes program running}
 
 
- In order to check that the statistics corresponds to the Proposal, the following call was used: $glbGetChannelRatePtr(0, ichannel, GLB_PRE)$.
+ In order to check that the statistics corresponds to the Proposal, the following call was used: \\
+glbGetChannelRatePtr(0, ichannel, GLB\_PRE).
 It returns the numbers of events in energy bins, to be summed over the them. It is to be called AFTER the calculation of sensitivities,
 otherwise some variables are not initialized. It is found that with the normalization factor 40 in the glb file the total number of
 events corresponds to the one in Figure 7 of the Proposal \cite{Akindinov:2019flp} (20000 $\nu_{\mu}CC$ events by eye from the figure).
 
 
+\section{Study of the experiment resolution}
 
-%\begin{figure*}[h]
-%\begin{center}
-%\includegraphics[width=0.75\textwidth]{plotYield.pdf}
-%\caption {The signal yield per $10^{10}$ EOT in the missing energy signature experiment for vector and pseudoscalar DM.
-%\label{fig:Yield}}
-%\end{center}
-%\end{figure*}
+
+ The resolution of $\delta$ measurement for the true value $\delta = \pi/2$ is shown in Fig. \ref{fig:del_delres_eres}.
+
+
+\begin{figure*}[h]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{del_delres_eres.pdf}
+\caption {Resolution of the $\delta$ measurement as a function of energy resolution
+\label{fig:del_delres_eres}}
+\end{center}
+\end{figure*}
+
+
 
 
 \clearpage
