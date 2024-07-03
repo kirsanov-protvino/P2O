@@ -108,7 +108,7 @@ The sensitivities of the project to some oscillation parameters as a function of
 \section{Introduction}
 
 
- P2O is the project of neutrino beam from IHEP Protvino to ORCA \cite{P2Oproject}
+ P2O is the project of neutrino beam from IHEP Protvino to ORCA \cite{Akindinov:2019flp}
 
 
 \section{Technical notes on the repository}
@@ -122,6 +122,12 @@ To check that your repositiry clone is "pushable" type inside it "git remote -v"
 
 
 \section{Technical notes on the Globes program running}
+
+
+ In order to check that the statistics corresponds to the Proposal, the following call was used: $glbGetChannelRatePtr(0, ichannel, GLB_PRE)$.
+It returns the numbers of events in energy bins, to be summed over the them. It is to be called AFTER the calculation of sensitivities,
+otherwise some variables are not initialized. It is found that with the normalization factor 40 in the glb file the total number of
+events corresponds to the one in Figure 7 of the Proposal \cite{Akindinov:2019flp} (20000 $\nu_{\mu}CC$ events by eye from the figure).
 
 
 

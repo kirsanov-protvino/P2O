@@ -116,13 +116,13 @@ $filter_value = 1000000
 
 energy(#electron)<
 	@type = 1
-	@sigma_e = {0.4, 0., 0.}
+	@sigma_e = {0.3, 0., 0.}
 /*	@sigma_e = {0,0.10,0} */
 >
 
 energy(#muon)<
 	@type = 1
-	@sigma_e = {0.4, 0., 0.}
+	@sigma_e = {0.3, 0., 0.}
 /*	@sigma_e = {0,0.05,0} */
 >
 
