@@ -101,8 +101,8 @@ int main(int argc, char *argv[])
   double eldm = 0.033e-3; 
 //
 
-  deltacp = 0.5 * M_PI;
-
+  deltacp = 0.5 * M_PI;   // Nominal deltacp
+  double deltacpnom = deltacp;
 
 /* Define "true" oscillation parameter vector */
   glb_params true_values = glbAllocParams();
@@ -172,6 +172,9 @@ int main(int argc, char *argv[])
   /*  double delta_steps = 15; */
   double res;
   int ithr=0;
+  int ithr1=0;
+  double deltaresleft = 0.;
+  double deltaresright = 0.;
   /*
   for(this_th13=th13_lower; this_th13<=th13_upper; this_th13+=(th13_upper-th13_lower)/th13_steps)
   {
@@ -187,8 +190,17 @@ int main(int argc, char *argv[])
       //fprintf(outfile, "%g %g\n", this_delta*180.0/M_PI, res);
       fprintf(outfile, "%g %g\n", this_delta*180.0/M_PI, sqrt(res));
 
-      if(!ithr && this_delta*180.0/M_PI > 90. && res > 1.) {
-        fprintf(stdout, "delta measurement error: %g\n", this_delta*180.0/M_PI - 90.);
+      // delta error on the left
+      if(!ithr1 && this_delta < deltacpnom && res < 1.) {
+        deltaresleft = (deltacpnom - this_delta)*180.0/M_PI;
+        fprintf(stdout, "delta measurement error left: %g\n", deltaresleft);
+        ithr1 = 1;
+      }
+
+      // delta error on the right
+      if(!ithr && this_delta > deltacpnom && res > 1.) {
+        deltaresright = (this_delta - deltacpnom)*180.0/M_PI;
+        fprintf(stdout, "delta measurement error right: %g\n", deltaresright);
         ithr = 1;
       }
 
@@ -197,6 +209,9 @@ int main(int argc, char *argv[])
     fprintf(outfile, "\n");
   }
 */
+
+  fprintf(stdout, "delta measurement error average: %g\n", 0.5*(deltaresleft + deltaresright));
+
   fclose(outfile);
   
   // Control printout:
