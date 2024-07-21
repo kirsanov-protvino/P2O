@@ -128,7 +128,11 @@ To check that your repositiry clone is "pushable" type inside it "git remote -v"
 glbGetChannelRatePtr(0, ichannel, GLB\_PRE).
 It returns the numbers of events in energy bins, to be summed over the them. It is to be called AFTER the calculation of sensitivities,
 otherwise some variables are not initialized. It is found that with the normalization factor 40 in the glb file the total number of
-events corresponds to the one in Figure 7 of the Proposal \cite{Akindinov:2019flp} (20000 $\nu_{\mu}CC$ events by eye from the figure).
+events corresponds to the one in Figure 7 of the Proposal \cite{Akindinov:2019flp} (20000 $\nu_{\mu}CC$ events by eye from the figure,
+after scaling from 90 MW to 450 MW).
+
+ In the Globes running the file p2o.glb was used. Some parameters there, such as energy resolution of 30\%, are taken from the
+Proposal \cite{Akindinov:2019flp}, some from the proposal of KM3NET https://iopscience.iop.org/article/10.1088/0954-3899/43/8/084001.
 
 
 \section{Study of the experiment resolution}
