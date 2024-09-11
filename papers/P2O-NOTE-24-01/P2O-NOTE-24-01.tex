@@ -162,6 +162,29 @@ $\pi$ (green), $3\pi/2$ (red).
 \end{figure*}
 
 
+\section{Effect of $\nu_e$ fraction in the beam}
+
+
+This fraction is specified in the spectra file. To avoid rewriting the spectra files, different fractions were simulated by changing the efficiency
+with which the channel "nu-e-beam" is added to the backgrounds. This is possible because the program does not have a protection against efficiencies
+greater than 1. For example the nominal efficiency for the $\nu_e$ appearence is 0.85. The fraction of $\nu_e$ increased by factor of 10 was
+simulated by increasing this efficiency to 8.5. This changes the delta CP measurement accuracy from 61.65 to 62.55 degrees (delta CP = 3/2 $\pi$).
+Decreasing the $\nu_e$ fraction is not visible if we print out only 3 digits of delta CP measurement.
+
+I understand this small effect like this. All events without identified muon are summed up ("shower type" events) and used in the analysis. In the model
+described in our glb file we have one error specified for this: 5\%. So the effect of increased $\nu_e$ fraction remains small if the fraction of $\nu_e$
+in the total number of "shower type" events does not dominate.
+
+The effect of $\nu_e$ fraction can be more significant if we assume that we don't know it with sufficient accuracy and specify this separate accuracy
+in the glb file. "Sufficient" here means a value of the order of 5\% mentioned above.
+
+
+\section{Effect of the type of systematic error}
+
+
+No significant effect was observed when it was changed from "chiSpectrumCalib" to "chiSpectrumTilt". Artefacts in the dependencies also did not change.
+
+
 
 \clearpage
 \bibliographystyle{apsrev4-2}
