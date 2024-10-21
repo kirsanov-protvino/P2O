@@ -1,5 +1,6 @@
 {
   auto c1 = new TCanvas("del"," ",200,10,900,600);
+  c1->SetGrid();
 
   TGraph* graph_del = new TGraph("del_05.dat");
   graph_del->SetTitle("");
