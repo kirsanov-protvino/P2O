@@ -1,5 +1,6 @@
 {
-  c1 = new TCanvas("del_delres_mdet"," ",200,10,900,600);
+  auto c1 = new TCanvas("del_delres_mdet"," ",200,10,900,600);
+  c1->SetGrid();
 
   TGraph* graph_del = new TGraph("del_delres_mdet1.dat");
   graph_del->SetTitle("#delta CP resolution for energy resolutions 0.3 (nominal) and 0.05");
