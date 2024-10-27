@@ -53,13 +53,13 @@ nuflux(#PtwoO)<
 	@flux_file="P2Oplus.dat"
         @time = 3       /* years */
         @power = 1.     /* MW (proton intensity) */
-        @norm = 50.
+        @norm = 35.
 >
 
 nuflux(#PtwoOanti)<
 	@flux_file="P2Ominus.dat"
 	@time = 3	/* years */
-	@power = 17. 	/* MW (proton intensity) */	
+	@power = 15. 	/* MW (proton intensity) */	
 >
 
 
@@ -187,7 +187,7 @@ channel(#nu_bar_mu_CC)<
 >
 
 channel(#nu_bar_mu_NC)<
-	@channel = 	#PtwoOanti:	-:	NOSC_m:	NOSC_m:	#NC:    #electron
+	@channel = 	#PtwoOanti:	-:	NOSC_m:	NOSC_m:	#NC:    #numunc
 >
 
 channel(#nu_bar_e_beam)<
