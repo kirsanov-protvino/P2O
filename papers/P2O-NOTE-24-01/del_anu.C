@@ -19,4 +19,9 @@
   graph_del_1->SetLineWidth(3);
   graph_del_1->SetLineColor(kGreen);
   graph_del_1->Draw("C SAME");
+
+  TGraph* graph_del_0 = new TGraph("del_0_anu.dat");
+  graph_del_0->SetLineWidth(3);
+  //graph_del_0->SetLineColor(kGreen);
+  graph_del_0->Draw("C SAME");
 }
