@@ -8,6 +8,7 @@
   graph_del->SetLineColor(kBlue);
   graph_del->GetXaxis()->SetTitle("Hypothetical #delta");
   graph_del->GetYaxis()->SetTitle("#sqrt{#chi^{2}}");
+  graph_del->GetXaxis()->SetLimits(0., 360.);
   graph_del->Draw("AC");
 
   TGraph* graph_del_15 = new TGraph("del_15_anu10.dat");
