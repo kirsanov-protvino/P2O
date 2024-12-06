@@ -10,7 +10,7 @@
   graph_del->SetTitle("");
   //graph_del->SetLineColor(kBlue);
   graph_del->SetLineWidth(3);
-  graph_del->GetXaxis()->SetTitle("P(#bar #nu_{#mu})");
+  graph_del->GetXaxis()->SetTitle("P(#bar#nu_{#mu})");
   graph_del->GetXaxis()->SetTitleSize(1.15*graph_del->GetXaxis()->GetTitleSize());
   graph_del->GetYaxis()->SetTitle("#Delta#delta [degrees]");
   graph_del->GetYaxis()->SetTitleSize(1.2*graph_del->GetYaxis()->GetTitleSize());
